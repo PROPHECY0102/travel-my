@@ -1,0 +1,53 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "codename": "kuala-lumpur",
+      "fullname": "Kuala Lumpur",
+      "imageUrl": "/data/cityImages/kl.jpeg",
+      "short": "Wandering the streets of Kuala Lumpur can mean dipping in and out of an urban present into an ancient past. The city is visually defined by the iconic Petronas Twin Towers, which, at 88 stories high, are the tallest twin buildings in the world and a vision of modern architecture. Shopping also switches from gleaming mega-malls to local markets where haggling and handicrafts go hand-in-hand."
+    },
+    {
+      "id": 2,
+      "codename": "georgetown",
+      "fullname": "Georgetown",
+      "imageUrl": "/data/cityImages/georgetown.jpeg",
+      "short": "Step into the enchanting world of Georgetown, Penang's capital, where colonial charm meets artistic flair. This UNESCO World Heritage Site boasts well-preserved architecture, colorful street art, and a thriving food scene. Wander through the narrow lanes of the historic district, discovering temples, mosques, and vibrant markets that tell the tales of Georgetown's rich multicultural history."
+    },
+    {
+      "id": 3,
+      "codename": "ipoh",
+      "fullname": "Ipoh",
+      "imageUrl": "/data/cityImages/ipoh.jpeg",
+      "short": "Nestled amidst limestone hills and charming colonial-era buildings, Ipoh welcomes you with a laid-back atmosphere and delectable local cuisine. Known as the 'City of Millionaires' Ipoh showcases a blend of heritage and contemporary arts. Explore its quirky street art, sip on aromatic white coffee, and embark on a culinary journey through the lively hawker stalls."
+    },
+    {
+      "id": 4,
+      "codename": "malacca-city",
+      "fullname": "Malacca City",
+      "imageUrl": "/data/cityImages/malacca-city.jpeg",
+      "short": "Immerse yourself in the historical allure of Malacca City, a UNESCO World Heritage Site with a storied past. Cobblestone streets, ancient temples, and Dutch-influenced architecture transport you back in time. Take a river cruise along the iconic Malacca River, sample the diverse local cuisine, and delve into the fascinating blend of cultures that make Malacca a captivating destination."
+    },
+    {
+      "id": 5,
+      "codename": "johor-bahru",
+      "fullname": "Johor Bahru",
+      "imageUrl": "/data/cityImages/johor-bahru.jpeg",
+      "short": "Gateway to Malaysia from Singapore, Johor Bahru is a dynamic city with a modern skyline and a rich cultural tapestry. Explore the impressive Sultan Abu Bakar Mosque, indulge in shopping at vibrant markets, and savor the unique flavors of local cuisine. With theme parks and historic sites, Johor Bahru offers a diverse range of experiences for every traveler."
+    },
+    {
+      "id": 6,
+      "codename": "kota-kinabalu",
+      "fullname": "Kota Kinabalu",
+      "imageUrl": "/data/cityImages/kota-kinabalu.jpeg",
+      "short": "Welcome to Kota Kinabalu, the capital of Sabah, where azure waters meet lush green landscapes. This coastal city is a gateway to Borneo's natural wonders, including Mount Kinabalu. Dive into vibrant markets, sample fresh seafood, and discover the rich marine life at nearby islands. Kota Kinabalu is a paradise for nature enthusiasts and those seeking adventure."
+    },
+    {
+      "id": 7,
+      "codename": "kuching",
+      "fullname": "Kuching",
+      "imageUrl": "/data/cityImages/kuching.jpeg",
+      "short": "Discover the charm of Kuching, Sarawak's capital, nestled along the Sarawak River. Known as the 'City of Cats', Kuching is a delightful blend of colonial architecture, vibrant markets, and lush greenery. Explore the historic Old Town, visit the Sarawak Museum, and savor local delicacies as you embrace the warm hospitality of this captivating city."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ export default {
       input: {
         main: "index.html",
         about: "about/index.html",
+        kl: "kl/index.html",
       },
     },
   },

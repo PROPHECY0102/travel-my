@@ -224,6 +224,7 @@ function changeCardText(codename, data, cardElements) {
   cardElements.name.innerText = dataSelected.fullname;
   cardElements.desc.innerText = dataSelected.short;
   cardElements.button.innerText = `Visit ${dataSelected.fullname} ➡`;
+  cardElements.button.setAttribute("data-main", dataSelected.codename);
   cardElements.image.setAttribute("src", dataSelected.imageUrl);
 }
 
@@ -268,3 +269,21 @@ if (stateSlideContainer) {
 
   addDotsEvent(stateSlideDots, Slide, stateSlides, "state");
 }
+
+// KL Page Example
+
+cityButton.addEventListener("click", (e) => {
+  const city = e.target.getAttribute("data-main");
+  if (city === "kuala-lumpur") {
+    location.href = "/kl/";
+  }
+});
+
+btnCities.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const city = e.target.getAttribute("data-city");
+    if (city === "kuala-lumpur") {
+      location.href = "/kl/";
+    }
+  });
+});

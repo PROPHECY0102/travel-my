@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="packages.css" />
     <script type="module" src="../headerNav.js"></script>
-    <script type="module" src="explore.js"></script>
-    <title>Explore Malaysia</title>
+    <script type="module" src="packages.js"></script>
+    <title>Travel.MY | Vacation Packages</title>
   </head>
   <body class="bg-slate-200 font-poppins">
     <div
@@ -222,11 +223,7 @@
             />
           </svg>
         </button>
-        <a
-          data-nav-links
-          href="/"
-          class="flex items-center justify-center place-self-center"
-        >
+        <a href="/" class="flex items-center justify-center place-self-center">
           <img
             class="w-12"
             src="../assets/images/malaysia-flag-rounded-rectangle.png"
@@ -292,250 +289,170 @@
       </div>
     </header>
     <main>
-      <section class="bg-slate-100 shadow-md grid place-items-center">
-        <div class="relative w-full">
-          <img
-            class="xl:w-full xl:h-[400px] xl:object-cover"
-            src="../assets/images/flat-geometric-bg.jpg"
-            alt=""
-          />
-          <div
-            class="absolute inset-0 grid place-items-center xl:px-36 px-4 py-4"
-          >
-            <div class="bg-white px-4 py-8 rounded-md shadow-md">
-              <h1 class="text-2xl xl:text-7xl font-bold text-center">
-                Explore The Wonderful Country of
-              </h1>
-              <div class="flex justify-center">
-                <a
-                  class="text-blue-600 text-5xl xl:text-9xl font-bold text-center underline"
-                  href="https://en.wikipedia.org/wiki/Malaysia"
-                  target="_blank"
-                >
-                  Malaysia
-                </a>
-              </div>
-            </div>
-          </div>
+      <section class="sections">
+        <div class="FilterForm">
+          <h3>Filter:</h3>
+          <hr />
+          <form action="/action_page.php">
+            <label for="state">Where do you want to go ?</label><br />
+            <select id="state" name="state">
+              <option value="Kuala Lumpur ">Kuala Lumpur</option>
+              <option value="Malacca">Malacca</option>
+              <option value="Salangor">Salangor</option>
+              <option value="Penang">Penang</option>
+              <option value="Johor">Johor</option></select
+            ><br />
+            <label for="StartDate">Start of the Date:</label><br />
+            <input type="month" id="StartDate" name="StartDate" /><br />
+            <label for="EndDate">End of the Date:</label><br />
+            <input type="month" id="EndDate" name="EndDate" /><br />
+            <label for="adults">How many Adults?</label><br />
+            <input type="number" id="adults" name="adults" /><br />
+            <label for="children">How many Children?</label><br />
+            <input type="number" id="children" name="chiildren" /><br />
+            <label for="room">How many Room do you want?</label><br />
+            <select id="room" name="room">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option></select
+            ><br />
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </section>
-      <section class="bg-blue-700 xl:px-36 px-4 py-4 shadow-md">
-        <div class="my-8 grid gap-6 xl:grid-cols-[70%_30%]">
-          <div>
-            <h1 class="text-yellow-400 font-bold text-xl xl:text-5xl underline">
-              Malaysia
-            </h1>
-            <div class="xl:flex gap-8 items-center">
-              <div class="mt-8 w-[200px] h-[100px] overflow-hidden">
-                <img src="../assets/images/Flag_of_Malaysia.png" alt="" />
-              </div>
-              <div
-                class="mt-8 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden"
-              >
-                <img
-                  src="../assets/images/Coat_of_arms_of_Malaysia.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <p class="text-xl font-[500] italic text-justify text-white">
-              Malaysia is a country in Southeast Asia. The federal
-              constitutional monarchy consists of 13 states and three federal
-              territories, separated by the South China Sea into two regions:
-              Peninsular Malaysia and Borneo's East Malaysia. Peninsular
-              Malaysia shares a land and maritime border with Thailand and
-              maritime borders with Singapore, Vietnam, and Indonesia. East
-              Malaysia shares land and maritime borders with Brunei and
-              Indonesia, as well as a maritime border with the Philippines and
-              Vietnam. Kuala Lumpur is the national capital, the country's
-              largest city, and the seat of the legislative branch of the
-              federal government. Putrajaya is the administrative centre, which
-              represents the seat of both the executive branch (the Cabinet,
-              federal ministries, and federal agencies) and the judicial branch
-              of the federal government. With a population of over 33 million,
-              the country is the world's 43rd-most populous country. The country
-              is one of 17 megadiverse countries and is home to numerous endemic
-              species. Tanjung Piai is the southernmost point of continental
-              Eurasia. The country is located in the tropics.
+      <article class="articles">
+        <!--First plan-->
+        <div class="BoxForm">
+          <div class="BoxImg">
+            <img
+              src="img/img1.jpg"
+              alt="Twin Towers"
+              width="155"
+              height="150"
+            />
+          </div>
+          <div class="BoxText">
+            <h2 class="BoxTitle">Kuala Lumpur Convention Centre</h2>
+            <div class="BoxStar">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="BoxP">
+              <br />One of the world’s most iconic engineering feats, the
+              PETRONAS Twin Towers are the pride of Malaysia, symbolising its
+              growth as an industrialised nation. The buildings are linked at
+              the 41st and 42nd levels by a distinctive skybridge, open to the
+              public at selected hours for an unparalleled view. <br />
+              <div class="BoxPrice">MYR 1,234</div>
             </p>
           </div>
-          <div class="bg-slate-100 rounded-md shadow-lg p-8">
-            <div class="grid place-items-center">
-              <div class="w-[300px] h-[300px] overflow-hidden">
-                <img src="../assets/images/location.jpeg" alt="" />
-              </div>
-            </div>
-            <h1 class="font-bold text-xl">Capital:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">Kuala Lumpur</h1>
-              <h1 class="font-bold text-2xl">Putrajaya</h1>
-            </div>
-            <h1 class="mt-4 font-bold text-xl">Population:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">33,200,000 (2023)</h1>
-            </div>
-            <h1 class="mt-4 font-bold text-xl">GDP:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">US$430.895 Billion (2023)</h1>
-            </div>
+          <div class="BoxButton">
+            <a class="button" href="information.html"
+              >Show Informations &#10148;
+            </a>
           </div>
         </div>
-      </section>
-      <section class="xl:px-36 px-4 py-4">
-        <h1 class="mt-8 text-center font-bold text-2xl xl:text-6xl">
-          What Does Malaysia Offers?
-        </h1>
-        <div class="grid xl:grid-cols-2 gap-6 mt-4 xl:mt-8">
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Rich and Diverse Cultural Experience
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/diverse.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia is Home to a Rich Multicultural Identity where various
-                different groups of people representing different cultures,
-                religions, customs and histories live and share the same
-                homeland for centuries. Living together in peace and harmony,
-                while also having an influence and impact on each other. This
-                country also guarantees that this diversity of race is here to
-                stay.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Various Culture Presence in Malaysia
-                </button>
-              </div>
-            </div>
+        <!-- Second plan -->
+        <div class="BoxForm">
+          <div class="BoxImg">
+            <img src="img/img2.webp" alt="Malacca" width="155" height="150" />
           </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Extraordinary Tropical Biodiversity
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img src="../assets/images/turtle.jpeg" alt="" />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia is one of the world's megadiverse countries. It is also
-                ranked 12th in the world, according to the National Biodiversity
-                Index, which is based on estimates of country richness and
-                endemism in four terrestrial vertebrate classes and vascular
-                plants.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Biodiversity in Malaysia
-                </button>
-              </div>
-            </div>
+          <div class="BoxText">
+            <h2 class="BoxTitle">Malacca Itinerary</h2>
+            <div class="BoxStar">&#973;3&#9733;&#9733;&#9733;</div>
+            <p class="BoxP">
+              <br />Malacca is a perfect city for a weekend getaway, and it’s
+              easy to squeeze in many of the city’s best attractions into a
+              two-day Malacca itinerary. Plan a fun-filled tour with these top
+              tourist attractions that include the best historical sites,
+              markets for street food and the Melaka River Cruise! <br />
+              <div class="BoxPrice">MYR 1,700</div>
+            </p>
           </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Modern Tourist Destination
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/modern.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia has the perception of being a traditional South East
-                Asia Country. However, Cities like Kuala Lumpur the capital
-                contrast with this perception. KL and many cities like it offers
-                a modern tourist experience. The presence of huge and endless
-                rows of Malls and High Rises, Ability to go Cashless and
-                ordering fare rides through a mobile app.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Cities in Malaysia
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Uniquely Delicious Cuisine
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/nasi-lemak-explore.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                From scrumptious Nasi Goreng to mouth-watering lamb Rendangs,
-                we've all had our fair share of exciting encounters with the
-                food of Malaysia. But there's so much more than meets the eye!
-                As a country made up primarily by Malays, Chinese, and Indians
-                and with a history of colonisation from the Thai, Portuguese,
-                and British, Malaysian food is a melting pot of flavours.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About Malaysian Cuisines
-                </button>
-              </div>
-            </div>
+          <div class="BoxButton">
+            <a class="button" href="information.html"
+              >Show Informations &#10148;
+            </a>
           </div>
         </div>
-      </section>
-      <section class="xl:px-36 px-4 py-4 grid place-items-center">
-        <div class="bg-slate-100 px-12 py-8 w-full">
-          <h1 class="text-xl font-bold mb-4 italic">Location of Malaysia</h1>
-          <div>
-            <iframe
-              class="w-full h-[500px]"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12499078.07864786!2d101.18222935816122!3d4.281310447436504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3034d3975f6730af%3A0x745969328211cd8!2sMalaysia!5e0!3m2!1sen!2smy!4v1701220155701!5m2!1sen!2smy"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+        <!-- Third plan -->
+        <div class="BoxForm">
+          <div class="BoxImg">
+            <img src="img/img3.jpg" alt="Selangor" width="155" height="150" />
+          </div>
+          <div class="BoxText">
+            <h2 class="BoxTitle">Kuala Selangor</h2>
+            <div class="BoxStar">&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="BoxP">
+              <br />Usually visited alongside a trip to Sekinchan, Kuala
+              Selangor is known for a couple of iconic sights - a hill that
+              serves as a home to cheeky silvered leaf monkeys, a river that's
+              home to gentle fireflies that twinkle in the dark after nightfall,
+              and many other charming historical landmarks. <br />
+              <div class="BoxPrice">MYR 700</div>
+            </p>
+          </div>
+          <div class="BoxButton">
+            <a class="button" href="information.html"
+              >Show Informations &#10148;
+            </a>
           </div>
         </div>
-      </section>
+        <!-- Fourth plan -->
+        <div class="BoxForm">
+          <div class="BoxImg">
+            <img src="img/img4.jpg" alt="Penang" width="155" height="150" />
+          </div>
+          <div class="BoxText">
+            <h2 class="BoxTitle">George Town, Penang</h2>
+            <div class="BoxStar">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="BoxP">
+              <br />George Town, Penang, Malaysia is a top travel destination –
+              and it’s easy to understand why! Penang Island boasts incredible
+              street art, delectable local cuisine, lush nature, amazing beaches
+              and a well-preserved history. For our trip, we created an
+              absolutely perfect Penang Itinerary – and we are sharing it with
+              our fellow travelers. <br />
+              <div class="BoxPrice">MYR 1,100</div>
+            </p>
+          </div>
+          <div class="BoxButton">
+            <a class="button" href="information.html"
+              >Show Informations &#10148;
+            </a>
+          </div>
+        </div>
+        <!-- Fifth plan -->
+        <div class="BoxForm">
+          <div class="BoxImg">
+            <img src="img/img5.jpg" alt="Johor" width="155" height="150" ; />
+          </div>
+          <div class="BoxText">
+            <h2 class="BoxTitle">Johor Bahru Itinerary</h2>
+            <div class="BoxStar">&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="BoxP">
+              <br />Johor is Malaysia's most populous state and a growing
+              economic power player. Most travel itineraries skip it, but those
+              who stray into the southern gateway to Malaysia will be rewarded
+              with the blissful solitude of its postcard-perfect islands and
+              wild jungles, while getting access to a taste of authentic
+              Malaysian culture and character not easily found in bigger tourist
+              hotspots. <br />
+              <div class="BoxPrice">MYR 999</div>
+            </p>
+          </div>
+          <div class="BoxButton">
+            <a class="button" href="information.html"
+              >Show Informations &#10148;
+            </a>
+          </div>
+        </div>
+      </article>
     </main>
     <footer
       class="bg-slate-100 grid place-items-center xl:px-36 px-4 pt-8 gap-4 shadow-lg"
     >
-      <a href="/" class="flex items-center justify-center">
+      <a data-nav-links href="/" class="flex items-center justify-center">
         <img
           class="w-12"
           src="../assets/images/malaysia-flag-rounded-rectangle.png"

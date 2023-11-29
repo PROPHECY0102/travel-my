@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="information.css" />
     <script type="module" src="../headerNav.js"></script>
-    <script type="module" src="explore.js"></script>
-    <title>Explore Malaysia</title>
+    <script type="module" src="information.js"></script>
+    <title>Kuala Lumpur Convention Center</title>
   </head>
   <body class="bg-slate-200 font-poppins">
     <div
@@ -222,11 +223,7 @@
             />
           </svg>
         </button>
-        <a
-          data-nav-links
-          href="/"
-          class="flex items-center justify-center place-self-center"
-        >
+        <a href="/" class="flex items-center justify-center place-self-center">
           <img
             class="w-12"
             src="../assets/images/malaysia-flag-rounded-rectangle.png"
@@ -292,250 +289,74 @@
       </div>
     </header>
     <main>
-      <section class="bg-slate-100 shadow-md grid place-items-center">
-        <div class="relative w-full">
+      <section class="sections">
+        <h2>Kuala Lumpur Convetion Centre</h2>
+        <p class="Star">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <button class="button heart">&#9825;</button>
+        <button class="button like">&#128077;</button>
+      </section>
+
+      <aside class="asides grid grid-cols-2 gap-4">
+        <img
+          class="mainImage"
+          src="img/img1.jpg"
+          alt="Twin Towers"
+          width="400"
+          height="400"
+        />
+        <div class="switchIMG grid gap-4">
           <img
-            class="xl:w-full xl:h-[400px] xl:object-cover"
-            src="../assets/images/flat-geometric-bg.jpg"
-            alt=""
+            class="ImageSmall1"
+            src="img/img1.jpg"
+            alt="Twin Towers"
+            width="130"
+            height="130"
           />
-          <div
-            class="absolute inset-0 grid place-items-center xl:px-36 px-4 py-4"
-          >
-            <div class="bg-white px-4 py-8 rounded-md shadow-md">
-              <h1 class="text-2xl xl:text-7xl font-bold text-center">
-                Explore The Wonderful Country of
-              </h1>
-              <div class="flex justify-center">
-                <a
-                  class="text-blue-600 text-5xl xl:text-9xl font-bold text-center underline"
-                  href="https://en.wikipedia.org/wiki/Malaysia"
-                  target="_blank"
-                >
-                  Malaysia
-                </a>
-              </div>
-            </div>
-          </div>
+          <img
+            class="ImageSmall2"
+            src="img/img7.jpg"
+            alt="Twin Towers"
+            width="130"
+            height="130"
+          />
+          <img
+            class="ImageSmall3"
+            src="img/img8.jpg"
+            alt="Twin Towers"
+            width="130"
+            height="130"
+          />
         </div>
-      </section>
-      <section class="bg-blue-700 xl:px-36 px-4 py-4 shadow-md">
-        <div class="my-8 grid gap-6 xl:grid-cols-[70%_30%]">
-          <div>
-            <h1 class="text-yellow-400 font-bold text-xl xl:text-5xl underline">
-              Malaysia
-            </h1>
-            <div class="xl:flex gap-8 items-center">
-              <div class="mt-8 w-[200px] h-[100px] overflow-hidden">
-                <img src="../assets/images/Flag_of_Malaysia.png" alt="" />
-              </div>
-              <div
-                class="mt-8 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden"
-              >
-                <img
-                  src="../assets/images/Coat_of_arms_of_Malaysia.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <p class="text-xl font-[500] italic text-justify text-white">
-              Malaysia is a country in Southeast Asia. The federal
-              constitutional monarchy consists of 13 states and three federal
-              territories, separated by the South China Sea into two regions:
-              Peninsular Malaysia and Borneo's East Malaysia. Peninsular
-              Malaysia shares a land and maritime border with Thailand and
-              maritime borders with Singapore, Vietnam, and Indonesia. East
-              Malaysia shares land and maritime borders with Brunei and
-              Indonesia, as well as a maritime border with the Philippines and
-              Vietnam. Kuala Lumpur is the national capital, the country's
-              largest city, and the seat of the legislative branch of the
-              federal government. Putrajaya is the administrative centre, which
-              represents the seat of both the executive branch (the Cabinet,
-              federal ministries, and federal agencies) and the judicial branch
-              of the federal government. With a population of over 33 million,
-              the country is the world's 43rd-most populous country. The country
-              is one of 17 megadiverse countries and is home to numerous endemic
-              species. Tanjung Piai is the southernmost point of continental
-              Eurasia. The country is located in the tropics.
-            </p>
-          </div>
-          <div class="bg-slate-100 rounded-md shadow-lg p-8">
-            <div class="grid place-items-center">
-              <div class="w-[300px] h-[300px] overflow-hidden">
-                <img src="../assets/images/location.jpeg" alt="" />
-              </div>
-            </div>
-            <h1 class="font-bold text-xl">Capital:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">Kuala Lumpur</h1>
-              <h1 class="font-bold text-2xl">Putrajaya</h1>
-            </div>
-            <h1 class="mt-4 font-bold text-xl">Population:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">33,200,000 (2023)</h1>
-            </div>
-            <h1 class="mt-4 font-bold text-xl">GDP:</h1>
-            <div class="mt-2">
-              <h1 class="font-bold text-2xl">US$430.895 Billion (2023)</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="xl:px-36 px-4 py-4">
-        <h1 class="mt-8 text-center font-bold text-2xl xl:text-6xl">
-          What Does Malaysia Offers?
-        </h1>
-        <div class="grid xl:grid-cols-2 gap-6 mt-4 xl:mt-8">
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Rich and Diverse Cultural Experience
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/diverse.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia is Home to a Rich Multicultural Identity where various
-                different groups of people representing different cultures,
-                religions, customs and histories live and share the same
-                homeland for centuries. Living together in peace and harmony,
-                while also having an influence and impact on each other. This
-                country also guarantees that this diversity of race is here to
-                stay.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Various Culture Presence in Malaysia
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Extraordinary Tropical Biodiversity
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img src="../assets/images/turtle.jpeg" alt="" />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia is one of the world's megadiverse countries. It is also
-                ranked 12th in the world, according to the National Biodiversity
-                Index, which is based on estimates of country richness and
-                endemism in four terrestrial vertebrate classes and vascular
-                plants.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Biodiversity in Malaysia
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Modern Tourist Destination
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/modern.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                Malaysia has the perception of being a traditional South East
-                Asia Country. However, Cities like Kuala Lumpur the capital
-                contrast with this perception. KL and many cities like it offers
-                a modern tourist experience. The presence of huge and endless
-                rows of Malls and High Rises, Ability to go Cashless and
-                ordering fare rides through a mobile app.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About The Cities in Malaysia
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-md shadow-lg">
-            <div class="grid place-items-center">
-              <h1 class="py-4 xl:py-8 font-bold text-xl xl:text-3xl underline">
-                Uniquely Delicious Cuisine
-              </h1>
-            </div>
-            <div class="grid place-items-center">
-              <div
-                class="mb-6 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px] overflow-hidden rounded-full border-slate-400 border-4 flex"
-              >
-                <img
-                  class="aspect-square"
-                  src="../assets/images/nasi-lemak-explore.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="px-12 py-4">
-              <p class="font-[500] italic text-justify text-lg xl:text-xl">
-                From scrumptious Nasi Goreng to mouth-watering lamb Rendangs,
-                we've all had our fair share of exciting encounters with the
-                food of Malaysia. But there's so much more than meets the eye!
-                As a country made up primarily by Malays, Chinese, and Indians
-                and with a history of colonisation from the Thai, Portuguese,
-                and British, Malaysian food is a melting pot of flavours.
-              </p>
-              <div class="mt-4 mb-6 grid place-items-end">
-                <button class="text-bold px-4 py-2 bg-black text-white">
-                  Learn More About Malaysian Cuisines
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="xl:px-36 px-4 py-4 grid place-items-center">
-        <div class="bg-slate-100 px-12 py-8 w-full">
-          <h1 class="text-xl font-bold mb-4 italic">Location of Malaysia</h1>
-          <div>
-            <iframe
-              class="w-full h-[500px]"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12499078.07864786!2d101.18222935816122!3d4.281310447436504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3034d3975f6730af%3A0x745969328211cd8!2sMalaysia!5e0!3m2!1sen!2smy!4v1701220155701!5m2!1sen!2smy"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+      </aside>
+
+      <article class="articles">
+        <h2>About</h2>
+
+        Soaring high at 452 metres and standing majestically against Kuala
+        Lumpur’s skyline, the PETRONAS Twin Towers - the tallest twin towers in
+        the world is definitely a must-visit when in the city. Designed by Cesar
+        Pelli and Associates, the architectural elements of the 88-storey towers
+        feature the Islamic geometric patterns where two interlocking squares
+        form a shape of eight-pointed stars, representing unity, harmony,
+        stability and rationality. Linked by a 170-metre sky bridge at levels 41
+        and 42, it symbolises a gateway to the development.
+        <br /><br />
+        For the interior, the lobby design incorporates contemporary Malaysian
+        motifs adapted from traditional handicrafts such as the Songket and
+        timber carvings. The towers’ design are high-tech yet distinctively
+        Malaysian, winning numerous awards including the Aga Khan Award for
+        Architecture and the FIABCI Prix de Excellence Award.
+        <hr />
+
+        <div class="amout">Amout</div>
+        <div class="price">MYR 1234</div>
+        <button class="button AddPlan">Add in Your Plan</button>
+      </article>
     </main>
     <footer
-      class="bg-slate-100 grid place-items-center xl:px-36 px-4 pt-8 gap-4 shadow-lg"
+      class="w-full bg-slate-100 grid place-items-center xl:px-36 px-4 pt-8 gap-4 shadow-lg"
     >
-      <a href="/" class="flex items-center justify-center">
+      <a data-nav-links href="/" class="flex items-center justify-center">
         <img
           class="w-12"
           src="../assets/images/malaysia-flag-rounded-rectangle.png"

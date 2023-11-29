@@ -141,6 +141,10 @@ if (placeSlideContainer) {
 // Simulating Dynamic Data being Inserted when user hovers over specific cities/place of interest
 // A Card Element showcasing an image, name, description and button gets dynamically updated using mock data to enhance user experience
 // Corresponding mock data originates from "/data/cities.json" or "/data/placeOfInterest.json"
+let pathname = "";
+if (window.location.pathname.includes("travel-my")) {
+  pathname = "/travel-my";
+}
 const btnCities = document.querySelectorAll("[data-city]");
 const cityName = document.querySelector("#city-name");
 const cityDesc = document.querySelector("#city-desc");
@@ -155,7 +159,7 @@ const cityCardElements = {
 };
 
 async function initCitiesData() {
-  const CitiesData = await fetchData("/data/cities.json");
+  const CitiesData = await fetchData(pathname + "/data/cities.json");
   if (btnCities) {
     btnCities.forEach((button) => {
       addHoverEffect(
@@ -183,7 +187,7 @@ const placeCardElements = {
 };
 
 async function initPlacesData() {
-  const placesData = await fetchData("/data/placeOfInterest.json");
+  const placesData = await fetchData(pathname + "/data/placeOfInterest.json");
   if (btnPlaces) {
     btnPlaces.forEach((button) => {
       addHoverEffect(
@@ -225,7 +229,7 @@ function changeCardText(codename, data, cardElements) {
   cardElements.desc.innerText = dataSelected.short;
   cardElements.button.innerText = `Visit ${dataSelected.fullname} ➡`;
   cardElements.button.setAttribute("data-main", dataSelected.codename);
-  cardElements.image.setAttribute("src", dataSelected.imageUrl);
+  cardElements.image.setAttribute("src", pathname + dataSelected.imageUrl);
 }
 
 initCitiesData();
@@ -283,7 +287,25 @@ btnCities.forEach((button) => {
   button.addEventListener("click", (e) => {
     const city = e.target.getAttribute("data-city");
     if (city === "kuala-lumpur") {
-      location.href = "/kl/";
+      location.href = pathname + "/kl/";
+    }
+  });
+});
+
+// Petronas Twin Towers Page Example
+
+placeButton.addEventListener("click", (e) => {
+  const place = e.target.getAttribute("data-main");
+  if (place === "petronas-twin-towers") {
+    location.href = "/petronas-twin-towers/";
+  }
+});
+
+btnPlaces.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const place = e.target.getAttribute("data-place");
+    if (place === "petronas-twin-towers") {
+      location.href = pathname + "/petronas-twin-towers/";
     }
   });
 });

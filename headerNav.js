@@ -86,3 +86,14 @@ nlDismiss.addEventListener("click", () => {
   swapClass(nlPopup, "hidden", "grid");
   swapClass(afterNlSubmitPopup, "grid", "hidden");
 });
+
+const naviagtionLinks = document.querySelectorAll("[data-nav-links]");
+
+let pathPreset = "";
+if (window.location.pathname.includes("travel-my")) {
+  pathPreset = "/travel-my";
+  naviagtionLinks.forEach((link) => {
+    const path = link.getAttribute("href");
+    link.setAttribute("href", pathPreset + path);
+  });
+}

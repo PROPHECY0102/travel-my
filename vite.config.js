@@ -7,6 +7,7 @@ export default {
         explore: "explore/index.html",
         itinerary: "itinerary/index.html",
         packages: "packages/index.html",
+        information: "information/index.html",
         kl: "kl/index.html",
       },
     },

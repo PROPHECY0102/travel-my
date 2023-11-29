@@ -8,6 +8,7 @@ export default {
     "./explore/**/*.{html,js}",
     "./itinerary/**/*.{html,js}",
     "./packages/**/*.{html,js}",
+    "./information/**/*.{html,js}",
   ],
   theme: {
     fontFamily: {

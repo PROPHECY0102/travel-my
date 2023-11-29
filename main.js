@@ -297,7 +297,7 @@ btnCities.forEach((button) => {
 placeButton.addEventListener("click", (e) => {
   const place = e.target.getAttribute("data-main");
   if (place === "petronas-twin-towers") {
-    location.href = "/petronas-twin-towers/";
+    location.href = pathname + "/petronas_twin_towers/";
   }
 });
 
@@ -305,7 +305,7 @@ btnPlaces.forEach((button) => {
   button.addEventListener("click", (e) => {
     const place = e.target.getAttribute("data-place");
     if (place === "petronas-twin-towers") {
-      location.href = pathname + "/petronas-twin-towers/";
+      location.href = pathname + "/petronas_twin_towers/";
     }
   });
 });

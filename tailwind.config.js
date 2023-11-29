@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./*.{html,js}",
     "./kl/**/*.{html,js}",
-    "./petronas-twin-towers/**/*.{html,js}",
+    "./petronas_twin_towers/**/*.{html,js}",
     "./explore/**/*.{html,js}",
     "./itinerary/**/*.{html,js}",
     "./packages/**/*.{html,js}",

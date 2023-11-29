@@ -1,4 +1,5 @@
 export default {
+  base: "/travel-my/",
   build: {
     rollupOptions: {
       input: {

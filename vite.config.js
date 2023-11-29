@@ -3,7 +3,8 @@ export default {
     rollupOptions: {
       input: {
         main: "index.html",
-        about: "about/index.html",
+        explore: "explore/index.html",
+        itinerary: "itinerary/index.html",
         kl: "kl/index.html",
       },
     },

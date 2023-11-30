@@ -279,7 +279,7 @@ if (stateSlideContainer) {
 cityButton.addEventListener("click", (e) => {
   const city = e.target.getAttribute("data-main");
   if (city === "kuala-lumpur") {
-    location.href = "/kl/";
+    location.href = pathname + "/kl/";
   }
 });
 

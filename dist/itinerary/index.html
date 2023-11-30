@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
+    <title>Travel.MY | Itinerary</title>
+    <script type="module" crossorigin src="/travel-my/assets/headerNav-e76003f2.js"></script>
+    <link rel="stylesheet" href="/travel-my/assets/headerNav-9a5a4e4c.css">
+  </head>
+  <body class="bg-slate-200 font-poppins">
+    <div
+      class="fixed w-full h-full bg-black/25 z-10 hidden place-items-center"
+      id="newsletter-popup-overlay"
+    >
+      <div
+        class="bg-slate-200 mx-4 xl:w-1/3 p-8 grid place-items-center rounded-lg shadow-md"
+        id="newsletter-form-popup"
+      >
+        <button
+          class="place-self-end hover:scale-105 transition-all duration-300"
+          id="close-newsletter-popup"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 15 15"
+          >
+            <path
+              fill="currentColor"
+              d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27Z"
+            />
+          </svg>
+        </button>
+        <a href="/" class="flex items-center justify-center place-self-center">
+          <img
+            class="w-12"
+            src="/travel-my/assets/malaysia-flag-rounded-rectangle-4e8e6147.png"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold">Travel.MY</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+          >
+            <path
+              fill="currentColor"
+              d="M6.25 11.5L12 13.16l6.32-4.59l-9.07.26a.52.52 0 0 0-.25.08l-2.87 1.65a.51.51 0 0 0 .12.94Z"
+              class="clr-i-solid clr-i-solid-path-1"
+            />
+            <path
+              fill="currentColor"
+              d="M34.52 6.36L28.22 5a3.78 3.78 0 0 0-3.07.67L6.12 19.5l-4.57-.2a1.25 1.25 0 0 0-.83 2.22l4.45 3.53a.55.55 0 0 0 .53.09c1.27-.49 6-3 11.59-6.07l1.12 11.51a.55.55 0 0 0 .9.37l2.5-2.08a.76.76 0 0 0 .26-.45l2.37-13.29c4-2.22 7.82-4.37 10.51-5.89a1.55 1.55 0 0 0-.43-2.88Z"
+              class="clr-i-solid clr-i-solid-path-2"
+            />
+            <path fill="none" d="M0 0h36v36H0z" />
+          </svg>
+        </a>
+        <h1 class="text-center font-bold text-md xl:text-2xl underline">
+          Subscribe to Our Newsletter!
+        </h1>
+        <img
+          class="xl:w-52 w-32"
+          src="/travel-my/assets/newsletter-bb6b2cd7.png"
+          alt=""
+        />
+        <h1 class="text-center font-bold text-sm xl:text-xl">
+          Get informed on all the latest news about Malaysia that are relevant
+          to your travel needs.
+        </h1>
+        <h1
+          class="px-2 bg-yellow-400 -skew-x-12 font-bold text-xs xl:text-lg text-center"
+        >
+          Recommneded for anyone planning to travel to Malaysia!
+        </h1>
+        <!-- Handle by Javascript no php action -->
+        <form action="/" class="w-full mt-4 grid" id="newsletter-form">
+          <div class="flex justify-between">
+            <label
+              for="newsletter-email-input"
+              class="font-bold text-sm xl:text-base"
+              >Email Address</label
+            >
+            <p
+              class="text-red-600 font-bold text-xs xl:text-base"
+              id="newsletter-error-message"
+            ></p>
+          </div>
+          <div class="flex shadow-md">
+            <input
+              type="email"
+              class="w-full px-4 py-2 text-sm xl:text-lg font-bold bg-slate-100 focus:outline-none rounded-l-md"
+              placeholder="youremail@domain.com"
+              autocomplete="off"
+              name="newsletter-email-input"
+              id="newsletter-email-input"
+            />
+            <input
+              class="cursor-pointer px-2 xl:px-8 py-2 bg-blue-800 hover:bg-blue-700 active:bg-blue-600 text-white font-bold rounded-r-md transition-all duration-300"
+              type="submit"
+              value="Submit"
+              id="newsletter-submit"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="bg-slate-200 mx-4 xl:w-1/3 p-8 hidden place-items-center gap-4 rounded-lg shadow-md"
+        id="after-newsletter-submitted-popup"
+      >
+        <h1 class="text-md xl:text-2xl font-bold underline">
+          Thank You for Subscribing!
+        </h1>
+        <div class="text-blue-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="80"
+            height="80"
+            viewBox="0 0 15 15"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M0 7.5a7.5 7.5 0 1 1 15 0a7.5 7.5 0 0 1-15 0Zm7.072 3.21l4.318-5.398l-.78-.624l-3.682 4.601L4.32 7.116l-.64.768l3.392 2.827Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <p class="text-center text-sm xl:text-base">
+          If you did not intend to subscribe to Travel.MY Newsletter. You can
+          follow
+          <a href="/" class="text-blue-700 underline"
+            >this link to unsubscribe</a
+          >.
+        </p>
+        <button
+          class="w-full text-white font-bold text-xl py-2 bg-blue-700 hover:bg-blue-600 rounded-md shadow-md transition-all duration-300"
+          id="newsletter-dismiss"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+    <div
+      class="hidden fixed w-full h-full bg-black/25 z-10"
+      id="nav-popup-overlay"
+    >
+      <div
+        class="fixed w-3/4 h-full bg-white px-4 py-8 -translate-x-20 tarnsition-all duration-300"
+        id="nav-popup"
+      >
+        <button class="mb-8" id="nav-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 256 256"
+          >
+            <path
+              fill="currentColor"
+              d="M208.49 191.51a12 12 0 0 1-17 17L128 145l-63.51 63.49a12 12 0 0 1-17-17L111 128L47.51 64.49a12 12 0 0 1 17-17L128 111l63.51-63.52a12 12 0 0 1 17 17L145 128Z"
+            />
+          </svg>
+        </button>
+        <ul class="grid gap-6">
+          <li>
+            <a
+              data-nav-links
+              class="hover:underline hover:border-black pt-4 pb-2 text-xl font-bold"
+              href="/explore/"
+              >Explore Malaysia</a
+            >
+          </li>
+          <li>
+            <a
+              data-nav-links
+              class="hover:underline hover:border-black pt-4 pb-2 text-xl font-bold"
+              href="/itinerary/"
+              >Travel Itinerary</a
+            >
+          </li>
+          <li>
+            <a
+              data-nav-links
+              class="hover:underline hover:border-black pt-4 pb-2 text-xl font-bold"
+              href="/packages/"
+              >Vacation Packages</a
+            >
+          </li>
+          <li>
+            <button
+              class="mt-8 bg-black text-white hover:bg-blue-800 active:bg-blue-900 px-4 py-2 text-xl font-bold"
+              data-open-newsletter
+            >
+              Subscribe to Our Newsletter
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <header
+      class="bg-slate-100 lg:flex xl:px-36 px-4 grid grid-flow-col auto-cols-fr justify-between items-center font-medium shadow-md py-8"
+    >
+      <div class="grid grid-cols-[1fr_2fr_1fr] place-items-start xl:block">
+        <button class="xl:hidden items-center" id="nav-open">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 17h14M5 12h14M5 7h14"
+            />
+          </svg>
+        </button>
+        <a href="/" class="flex items-center justify-center place-self-center">
+          <img
+            class="w-12"
+            src="/travel-my/assets/malaysia-flag-rounded-rectangle-4e8e6147.png"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold">Travel.MY</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+          >
+            <path
+              fill="currentColor"
+              d="M6.25 11.5L12 13.16l6.32-4.59l-9.07.26a.52.52 0 0 0-.25.08l-2.87 1.65a.51.51 0 0 0 .12.94Z"
+              class="clr-i-solid clr-i-solid-path-1"
+            />
+            <path
+              fill="currentColor"
+              d="M34.52 6.36L28.22 5a3.78 3.78 0 0 0-3.07.67L6.12 19.5l-4.57-.2a1.25 1.25 0 0 0-.83 2.22l4.45 3.53a.55.55 0 0 0 .53.09c1.27-.49 6-3 11.59-6.07l1.12 11.51a.55.55 0 0 0 .9.37l2.5-2.08a.76.76 0 0 0 .26-.45l2.37-13.29c4-2.22 7.82-4.37 10.51-5.89a1.55 1.55 0 0 0-.43-2.88Z"
+              class="clr-i-solid clr-i-solid-path-2"
+            />
+            <path fill="none" d="M0 0h36v36H0z" />
+          </svg>
+        </a>
+        <div class="lg:hidden"></div>
+      </div>
+      <div class="hidden xl:flex items-center gap-16">
+        <nav>
+          <ul class="hidden xl:flex items-center gap-8 text-md">
+            <li>
+              <a
+                data-nav-links
+                class="hover:border-b-2 hover:border-black pt-4 pb-2"
+                href="/explore/"
+                >Explore Malaysia</a
+              >
+            </li>
+            <li>
+              <a
+                data-nav-links
+                class="hover:border-b-2 hover:border-black pt-4 pb-2"
+                href="/itinerary/"
+                >Travel Itinerary</a
+              >
+            </li>
+            <li>
+              <a
+                data-nav-links
+                class="hover:border-b-2 hover:border-black pt-4 pb-2"
+                href="/packages/"
+                >Vacation Packages</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="bg-black text-white hover:bg-blue-800 active:bg-blue-900 px-4 py-2 text-lg hidden lg:block transition-all"
+          data-open-newsletter
+        >
+          Subscribe to Our Newsletter
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="bg-blue-700 xl:px-64 px-4 py-4 shadow-md">
+        <h1
+          class="mt-4 text-2xl xl:text-5xl font-bold text-slate-100 text-center underline"
+        >
+          Travel.MY Presents
+        </h1>
+        <h1
+          class="mt-4 italic text-2xl xl:text-5xl font-bold text-slate-100 text-center"
+        >
+          The Perfect 2 Weeks Malaysia Itinerary and Travel Guide!
+        </h1>
+        <div class="xl:w-full xl:h-[700px] overflow-hidden flex justify-center">
+          <img
+            class="my-8 rounded-md object-cover"
+            src="/travel-my/assets/eagle-632be04c.jpeg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="bg-slate-100 xl:px-80 px-4 py-4 shadow-md">
+        <div class="mt-8 grid gap-6 text-justify">
+          <p class="text-lg xl:text-2xl font-[500]">
+            This post may contain affiliate links to tours and hotels. These
+            help us earn a small commission at no additional charge to you.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Malaysia is an amazing country with a fusion of Malay, Chinese,
+            Indian cultures and rich colonial heritage. We have visited Malaysia
+            3 times and have created an idyllic 2 week Malaysia itinerary where
+            you'll enjoy modern cities, beautiful beaches, tea plantations,
+            wildlife, temples, rainforests and some of the most delicious
+            cuisine we've ever tasted. It is one of our top south east Asian
+            destinations and we find the people are super friendly and welcoming
+            there.
+          </p>
+          <h1 class="text-xl xl:text-4xl font-bold">
+            2 week Malaysia itinerary
+          </h1>
+          <p class="text-lg xl:text-2xl font-[500]">
+            The 2 week Malaysia itinerary starts and ends in the capital city
+            Kuala Lumpur, and focuses on the top 5 most popular west coast
+            destinations: Kuala Lumpur, Melaka, Cameron Highlands, Penang Island
+            and Langkawi Island.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            We have featured a few of the must visit places for each destination
+            and a bit of information on how to travel to each one.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Image below Illustrate the itenerary across 2 weeks
+          </p>
+          <div
+            class="xl:w-full xl:h-[700px] overflow-hidden flex justify-start"
+          >
+            <img
+              class="my-8 rounded-md object-cover"
+              src="/travel-my/assets/malaysia-itinerary-plan-082b40e7.png"
+              alt=""
+            />
+          </div>
+          <h1 class="text-xl xl:text-4xl font-bold">
+            Transport for your Malaysia itinerary
+          </h1>
+          <p class="text-lg xl:text-2xl font-[500]">
+            This 2 week Malaysia itinerary uses a combination of buses, ferries
+            and planes to get around. Use 12Go Asia for finding the best bus and
+            ferry transport fares, and Skyscanner to find the cheapest flights.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            We generally found that public transport in Malaysia is reliable,
+            comfortable, easy to use and inexpensive. Occasionally some bus
+            routes will offer luxury coaches for a slightly more expensive fare
+            with extra legroom, personal entertainment system and WIFI on board.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Grab taxi is the best way to get around all the towns on the
+            itinerary (except the Cameron Highlands where they do not operate)
+            and the fares are really cheap! Pick up a local SIM card and
+            download the Grab app here.
+          </p>
+          <div
+            class="xl:w-full xl:h-[700px] overflow-hidden flex justify-center"
+          >
+            <img
+              class="my-8 rounded-md object-cover"
+              src="/travel-my/assets/itinerary-boats-7435c0d3.jpeg"
+              alt=""
+            />
+          </div>
+          <h1 class="text-xl xl:text-4xl font-bold">Kuala Lumpur: 3 nights</h1>
+          <p class="text-lg xl:text-2xl font-[500]">
+            This 2 week Malaysia itinerary starts in the capital city of Kuala
+            Lumpur - where your international flight will most likely arrive
+            into. Take the metro or airport coach to the city centre or
+            <a href="/" class="underline text-blue-600"
+              >book a private transfer direct to your hotel ></a
+            >
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Having internet on the go in Malaysia is recommended and local SIM
+            cards are pretty cheap with generous data allowances. You can
+            purchase them from airports, malls and convenience stores (bring
+            your passport along for identification purposes).
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            To save time you can prepay online and collect a SIM from your
+            arrival airport - just remember to make sure your phone is not
+            locked to your local network provider before purchasing one.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Alternatively if you do not want to change your SIM card then
+            renting a pocket WIFI device might be for you. We've used them
+            multiple times on our travels and love that we can both connect our
+            phones to it. Pre-order one online with Klook for collection (and
+            drop off) when you arrive at either KLIA or KLIA2 airport in Kuala
+            Lumpur.
+          </p>
+          <div
+            class="xl:w-full xl:h-[700px] overflow-hidden flex justify-center"
+          >
+            <img
+              class="my-8 rounded-md object-cover"
+              src="/travel-my/assets/itinerary-petronas-7a0f61ec.jpeg"
+              alt=""
+            />
+          </div>
+          <h1 class="text-xl xl:text-4xl font-bold">
+            Things to do in Kuala Lumpur
+          </h1>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Kuala Lumpur is the capital city filled with gleaming skyscrapers
+            and a skyline dominated by the famous Petronas Twin Towers.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            The city is also home to lots of British colonial architecture,
+            glitzy shopping malls, local markets and fabulous street food. There
+            is so much to see and do here but these are our recommendations of
+            top things to do:
+          </p>
+          <h1 class="text-xl xl:text-4xl font-bold">Batu Caves</h1>
+          <div
+            class="xl:w-full xl:h-[700px] overflow-hidden flex justify-center"
+          >
+            <img
+              class="my-8 rounded-md object-cover"
+              src="/travel-my/assets/itinerary-batu-caves-9dc33bdc.jpeg"
+              alt=""
+            />
+          </div>
+          <p class="text-lg xl:text-2xl font-[500]">
+            This is one of the most iconic Malaysian attractions and should be
+            high on your Kuala Lumpur itinerary. Batu Caves is a Hindu temple
+            and shrine located at the top of a limestone hill comprising of
+            three major caves.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            A large statue of the Hindu God is located at the entrance, besides
+            a steep and brightly coloured set of steps. You can reach Batu Caves
+            by taking a 40 minute train journey out of the city centre or by
+            booking a half day tour.
+          </p>
+          <h1 class="text-xl xl:text-4xl font-bold">KL Tower</h1>
+          <div
+            class="xl:w-full xl:h-[700px] overflow-hidden flex justify-center"
+          >
+            <img
+              class="my-8 rounded-md object-cover"
+              src="/travel-my/assets/itinerary-kl-tower-fb12a0aa.jpeg"
+              alt=""
+            />
+          </div>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Many visitors head up to the top of the Petronas Towers, but we
+            prefer going to the KL Tower instead.
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Whilst the view from Petronas Towers is indeed awesome, the view
+            from the top of KL Tower actually includes the Petronas Towers in
+            the skyline, plus the viewing deck is outdoors with a 360 degree
+            panoramic view!
+          </p>
+          <p class="text-lg xl:text-2xl font-[500]">
+            Extra bonus points for having a yummy revolving buffet restaurant as
+            well.
+            <a href="/" class="underline text-blue-600"
+              >Book a KL Tower Ticket and read our KL Tower blog post ></a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-slate-100 grid place-items-center xl:px-36 px-4 pt-8 gap-4 shadow-lg"
+    >
+      <a data-nav-links href="/" class="flex items-center justify-center">
+        <img
+          class="w-12"
+          src="/travel-my/assets/malaysia-flag-rounded-rectangle-4e8e6147.png"
+          alt=""
+        />
+        <h1 class="text-2xl font-bold">Travel.MY</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 36 36"
+        >
+          <path
+            fill="currentColor"
+            d="M6.25 11.5L12 13.16l6.32-4.59l-9.07.26a.52.52 0 0 0-.25.08l-2.87 1.65a.51.51 0 0 0 .12.94Z"
+            class="clr-i-solid clr-i-solid-path-1"
+          />
+          <path
+            fill="currentColor"
+            d="M34.52 6.36L28.22 5a3.78 3.78 0 0 0-3.07.67L6.12 19.5l-4.57-.2a1.25 1.25 0 0 0-.83 2.22l4.45 3.53a.55.55 0 0 0 .53.09c1.27-.49 6-3 11.59-6.07l1.12 11.51a.55.55 0 0 0 .9.37l2.5-2.08a.76.76 0 0 0 .26-.45l2.37-13.29c4-2.22 7.82-4.37 10.51-5.89a1.55 1.55 0 0 0-.43-2.88Z"
+            class="clr-i-solid clr-i-solid-path-2"
+          />
+          <path fill="none" d="M0 0h36v36H0z" />
+        </svg>
+      </a>
+      <div class="flex justify-center items-center gap-4">
+        <a href="/" target="_blank" class="hover:text-blue-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+            />
+          </svg>
+        </a>
+        <a href="/" target="_blank" class="hover:text-blue-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
+            />
+          </svg>
+        </a>
+        <a href="/" target="_blank" class="hover:text-blue-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"
+            />
+          </svg>
+        </a>
+        <a href="/" target="_blank" class="hover:text-blue-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M10.75 13.04c0-.57-.47-1.04-1.04-1.04c-.57 0-1.04.47-1.04 1.04a1.04 1.04 0 1 0 2.08 0zm3.34 2.37c-.45.45-1.41.61-2.09.61s-1.64-.16-2.09-.61a.26.26 0 0 0-.38 0a.26.26 0 0 0 0 .38c.71.71 2.07.77 2.47.77c.4 0 1.76-.06 2.47-.77a.26.26 0 0 0 0-.38c-.1-.1-.27-.1-.38 0zm.2-3.41c-.57 0-1.04.47-1.04 1.04c0 .57.47 1.04 1.04 1.04s1.04-.47 1.04-1.04c0-.57-.46-1.04-1.04-1.04z"
+            />
+            <path
+              fill="currentColor"
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm5.8 11.33c.02.14.03.29.03.44c0 2.24-2.61 4.06-5.83 4.06s-5.83-1.82-5.83-4.06c0-.15.01-.3.03-.44c-.51-.23-.86-.74-.86-1.33a1.455 1.455 0 0 1 2.47-1.05c1.01-.73 2.41-1.19 3.96-1.24l.74-3.49c.01-.07.05-.13.11-.16c.06-.04.13-.05.2-.04l2.42.52a1.04 1.04 0 1 1 .93 1.5c-.56 0-1.01-.44-1.04-.99l-2.17-.46l-.66 3.12c1.53.05 2.9.52 3.9 1.24a1.455 1.455 0 1 1 1.6 2.38z"
+            />
+          </svg>
+        </a>
+        <a href="/" target="_blank" class="hover:text-blue-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="grid place-items-center">
+        <p class="xl:font-medium text-sm xl:text-lg">
+          All Rights Reserved. © 2023 Travel.MY
+        </p>
+        <p class="text-center xl:text-base text-xs">
+          This Website does not guaranteed tourist safety nor can it informed on
+          all possible ongoing events. Thus, Travel.MY is not responsible for
+          misrepresenting information in regards to outdated info on this
+          website.
+          <a href="/" class="text-blue-600 underline"
+            >Travel.MY Privacy Policy and Terms and Conditions</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
